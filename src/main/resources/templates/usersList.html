@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h3>Lista de usuarios</h3>
+	
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Imagen</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="item : ${usuarios}">
+				<td th:text="${item.nombre}"></td>
+				<td>
+				
+					<img th:src="@{'/uploads/'+${item.foto}}"  th:alt="${item.foto}"/>
+				
+				</td>
+				
+			
+			
+			</tr>
+			
+		
+		</tbody>
+	
+	</table>
+	
+
+</body>
+</html>

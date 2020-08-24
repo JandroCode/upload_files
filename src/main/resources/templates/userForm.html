@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h3>Lista de usuarios</h3>
+	
+	<form th:Action="@{/save}" th:object="${usuario}" method="POST" enctype="multipart/form-data">
+		<input type="text" th:field="*{nombre}" />
+		<input type="file" name="file" />
+		<input type="submit" value="enviar" />
+	
+	</form>
+
+</body>
+</html>
